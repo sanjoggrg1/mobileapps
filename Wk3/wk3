@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save a Bite</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #ff9800;
+            color: white;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        .nav-links li {
+            margin: 0 15px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 400;
+        }
+        header {
+            padding: 50px;
+            background: #f4f4f4;
+        }
+        .cta-button {
+            background: #ff9800;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                text-align: center;
+                background: #ff9800;
+                position: absolute;
+                top: 50px;
+                width: 100%;
+                left: 0;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Save a Bite</div>
+        <button class="menu-toggle">&#9776;</button>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <header>
+        <h1>Rescue Delicious Meals</h1>
+        <p>Join us to reduce food waste and enjoy fresh meals at lower prices.</p>
+        <button class="cta-button">Get Started</button>
+    </header>
+    
+    <script>
+        $(document).ready(function(){
+            $('.menu-toggle').click(function(){
+                $('.nav-links').slideToggle();
+            });
+        });
+    </script>
+</body>
+</html>
